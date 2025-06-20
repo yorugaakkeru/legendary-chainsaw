@@ -1,0 +1,192 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(19, 20, 37);
+}
+
+h1 {
+    color: blueviolet;
+}
+
+a {
+    color: rgb(54, 37, 15);
+
+}
+
+p {
+    color: antiquewhite;
+    padding: 50px;
+}
+
+
+
+
+.shape {
+    width: 200px;
+    aspect-ratio: 1;
+    background: repeating-linear-gradient(45deg, #F07818 0 15px, rgb(240 168 48,0.3) 0 30px);
+    clip-path: shape(from 0 0, hline to 100%, vline to 100%, hline to 0);
+}
+
+
+
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+  }
+#parentCircle{
+    background-color: #F07818;
+    box-shadow: 0 0 10px rgba(154 201 255 / 0.6);
+    width: 700px ;
+    height: 400px;
+    /* flex-direction: grid; */
+    display: flex;
+    aspect-ratio: 1.5;
+    border-radius: 12px;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+
+    #childCircle1{
+        width: 100px;
+        height: 100px;
+        /* background-image: radial-gradient(circle at center,red 0,blue , green 100%,transparent); */
+        /* background:rgb(240 168 48,0.3); */
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+        position: absolute;
+        border-style: solid;
+        border-color: blueviolet;
+        
+
+    }
+    #childCircle2{
+        width: 100px;
+        height: 100px;
+        /* background-image: radial-gradient(circle at center,red 0,blue , green 100%); */
+        background:rgb(240 168 48,0.3);
+        border-radius: 50%;
+        /* position: matrix(1,2);
+         */
+         top: 10px;
+        right: 10px;
+        position: absolute;
+        border-style: solid;
+
+        border-color: blueviolet;
+
+    }
+    #childCircle3{
+        width: 100px;
+        height: 100px;
+        background:rgb(240 168 48,0.3);
+        border-radius: 50%;
+        position: center;
+        margin:auto;
+        border-style: solid;
+
+        border-color: blueviolet;
+
+    }
+    #childCircle4{
+        width: 100px;
+        height: 100px;
+        background:rgb(240 168 48,0.3);
+        border-radius: 50%;
+        bottom: 10px;
+        left: 10px;
+        position: absolute;
+        border-style: solid;
+
+        border-color: blueviolet;
+    
+
+    }
+    #childCircle5{
+        width: 100px;
+        height: 100px;
+        background:rgb(240 168 48,0.3);
+        border-radius: 50%;
+        bottom: 10px;
+        right: 10px;
+        position: absolute;
+        border-style: solid;
+
+        border-color: blueviolet;
+
+    }
+}
+.parentFilter{
+    background-image:  url("/home/eos/Downloads/cat.jpeg");
+    box-shadow: 0 0 10px rgba(154 201 255 / 0.6);
+    width: 700px ;
+    height: 400px;
+    flex-direction: column;
+    aspect-ratio: 1.5;
+    border-radius: 12px;
+    position:relative;
+    
+    /* padding: 5vh 5vw; */
+    .childFilter{
+        position: absolute;
+        inset: 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: inherit;
+        background: rgb(255 255 255 / .1);
+        backdrop-filter: blur(15px);
+        color: white;
+        container-type: size;
+        align-items:center;
+        place-items: center;
+    }
+}
+.startPage {
+    flex-direction: column;
+    background-color: rgb(59, 59, 131, 0.5);
+    text-align: justify;
+    font-size: medium;
+   
+     padding: 5vh 5vw;
+    border-radius: 20px;
+    /* box-shadow: black;
+    box-shadow: 10px; */
+}
+
+.startPageItems {
+    /* order:5; */
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.button1 {
+    background-color: blue;
+    border-color: blue;
+    border-radius: 70px;
+    font-size: medium;
+    color: chartreuse;
+}
+
+/* 
+.houdini-snow{
+    --houdini-snow-min: 4;
+  --houdini-snow-max: 8;
+  --houdini-snow-fill: top;
+  --houdini-snow-flakes: 400;
+
+  background-color: lightblue;
+  height: 30vh;
+  background-image: paint(houdini-snow);
+  } */
